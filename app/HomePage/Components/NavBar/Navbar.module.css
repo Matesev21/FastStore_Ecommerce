@@ -1,0 +1,119 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background: linear-gradient(90deg, #4f46e5, #7c3aed, #d946ef);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.logo:hover {
+  transform: scale(1.03);
+}
+
+.navLinks {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.link {
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: #ffffff; /* neutral-600 */
+  text-decoration: none;
+  position: relative;
+  transition: color 0.25s ease;
+  letter-spacing: 0.3px;
+}
+
+.link:hover {
+  color: #111827; /* neutral-900 */
+}
+
+/* Elegant sliding underline under the navigation links */
+.link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background: linear-gradient(90deg, #4f46e5, #7c3aed, #d946ef);
+  transform-origin: bottom right;
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.actionContainer {
+  display: flex;
+  align-items: center;
+}
+
+/* Call to action button with eye-catching premium gradient and glowing hover effect */
+.ctaButton {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #d946ef 100%);
+  background-size: 200% auto;
+  padding: 0.75rem 1.85rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.25);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.ctaButton:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.45);
+}
+
+.ctaButton:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 10px rgba(124, 58, 237, 0.3);
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .navLinks {
+    gap: 1.5rem;
+  }
+
+  .link {
+    font-size: 0.95rem;
+  }
+
+  .ctaButton {
+    padding: 0.65rem 1.4rem;
+    font-size: 0.85rem;
+  }
+}
