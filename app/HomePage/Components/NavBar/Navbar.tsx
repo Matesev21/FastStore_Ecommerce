@@ -12,8 +12,8 @@ export const NavBar = () => {
             src={Logo}
             alt="FastStore Logo"
             className={styles.logo}
-            width={130}
-            height={130}
+            width={140}
+            height={110}
             priority
             style={{ objectFit: "contain" }}
           />

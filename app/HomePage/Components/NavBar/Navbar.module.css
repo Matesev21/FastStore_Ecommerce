@@ -21,6 +21,7 @@
 .logo {
   cursor: pointer;
   transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border-radius: 70%;
 }
 
 .logo:hover {
@@ -44,7 +45,8 @@
 }
 
 .link:hover {
-  color: #111827; /* neutral-900 */
+  /*color: #111827;*/ 
+  transform: scale(1.1);/* neutral-900 */
 }
 
 /* Elegant sliding underline under the navigation links */
